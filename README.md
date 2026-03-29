@@ -30,6 +30,22 @@ This project allows users to efficiently organize and track their work. Admins c
 
 ---
 
+## 📄 Screenshots & Demo
+
+All application screenshots are available in the document below:
+
+👉 **[View Application Screenshots](./TaskManager_ApplicationWorking.docx)**
+
+This document includes:
+
+* Login page
+* User dashboard
+* Admin dashboard
+* Task management features
+
+Please download and open the file to view the complete UI of the application.
+
+
 ## 🛠️ Tech Stack
 
 ### Backend
