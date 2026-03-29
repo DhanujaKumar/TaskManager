@@ -1,7 +1,7 @@
 # 📝 Task Management System (Full Stack)
 
 A full-stack Task Management System built with **Node.js, Express, MySQL, and React**.
-This application allows admins to assign tasks and users to manage their own tasks with authentication and role-based access control.
+This project allows users to efficiently organize and track their work. Admins can create users and assign tasks to them, while regular users can log in, view their assigned and personal tasks, create new tasks, update their status, and delete them. The system ensures secure access using JWT-based authentication and role-based authorization, providing a structured workflow for managing tasks similar to real-world project management tools.
 
 ---
 
@@ -87,8 +87,8 @@ cd task-manager
 ### Create Database
 
 ```sql
-CREATE DATABASE task_manager;
-USE task_manager;
+CREATE DATABASE task;
+USE task;
 ```
 
 ---
@@ -169,12 +169,6 @@ DB_NAME=task_manager
 
 ```
 node server.js
-```
-
-or
-
-```
-npx nodemon server.js
 ```
 
 ---
