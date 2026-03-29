@@ -64,7 +64,6 @@ router.post("/login", (req, res) => {
 router.post("/register", verifyToken, isAdmin, async (req, res) => {
   const { name, email, password, role } = req.body;
 
-  // ✅ Simple validation
   if (!name || !email || !password) {
     return res.status(400).json({
       message: "Name, email and password are required"
