@@ -1,0 +1,862 @@
+{
+  "info": {
+    "_postman_id": "b3043390-973b-48f0-9baa-48162894cca0",
+    "name": "TaskManager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49965129",
+    "_collection_link": "https://go.postman.co/collection/49965129-b3043390-973b-48f0-9baa-48162894cca0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "255"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ff-YwxNLKYps/r7ooMLAhVdu+q0mIE\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:31:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc0NzczMTA2LCJleHAiOjE3NzQ3NzY3MDZ9.icpSWFQ4crBzD6MQcOnY1a0DTIYOOovFj4ewnEx6BtE\",\n    \"user\": {\n        \"id\": 1,\n        \"email\": \"admin@gmail.com\",\n        \"role\": \"admin\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "New User",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "New User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Sheela\",\r\n    \"email\": \"sheela@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"user\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"27-O/zF1M4EsSeqcgZOzAXUbc5OpUA\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:34:27 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User created successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "GetAllUsers",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "GetAllUsers",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/auth/allusers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "auth",
+                "allusers"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-hlHJ6hf9iH99BMJKKQZevSGTymw\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:36:07 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"users\": [\n        {\n            \"id\": 3,\n            \"name\": \"John\",\n            \"email\": \"john@gmail.com\",\n            \"role\": \"user\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Ram\",\n            \"email\": \"ram@gmail.com\",\n            \"role\": \"user\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Sheela\",\n            \"email\": \"sheela@gmail.com\",\n            \"role\": \"user\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Assign Task to user",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Assign Task to user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Complete backend task\",\r\n    \"description\": \"Finish backend\",\r\n    \"assigned_to\": 6,    \r\n    \"deadline\": \"2026-04-01 18:00:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tasks/assign",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "assign"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "52"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"34-u4QbbZYDI8/p/vw0jMDebyHDn50\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:39:47 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Task assigned successfully\",\n    \"taskId\": 12\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Task by user",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Create Task by user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Review Project\",\r\n    \"description\": \"Check the status and update the progress\",\r\n    \"deadline\": \"2026-04-02 20:00:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "51"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"33-0HzpIWv3JiJOEnJ2BrKxkmTukbw\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:42:58 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Task created successfully\",\n    \"taskId\": 13\n}"
+        }
+      ]
+    },
+    {
+      "name": "AllTasks of User",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "AllTasks of User",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/userTasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "userTasks"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "393"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"189-HtX6D3x9Y9I2iKt3lSNjnMMTTCI\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:45:26 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"tasks\": [\n        {\n            \"id\": 5,\n            \"title\": \"Attend 3pm meeting\",\n            \"description\": \"Discuss and fix the bug\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-03-28T18:30:00.000Z\",\n            \"created_at\": \"2026-03-28T14:58:57.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Complete backend task\",\n            \"description\": \"Finish backend\",\n            \"status\": \"in_progress\",\n            \"deadline\": \"2026-04-01T12:30:00.000Z\",\n            \"created_at\": \"2026-03-28T06:51:37.000Z\"\n        }\n    ],\n    \"total\": 2,\n    \"page\": 1,\n    \"totalPages\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Task Status Update",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Task Status Update",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"completed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tasks/5/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "5",
+                "status"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "46"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2e-B8uBtec+6H6t/bzib6yP7uj12Jo\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:47:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Task status updated successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Task by User",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Delete Task by User",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "9"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"27-urf4l4W7aUjEqcMghGgrIBDtf0M\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:48:32 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Task deleted successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Task by Admin",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Delete Task by Admin",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/admin/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "admin",
+                "1"
+              ]
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "31"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1f-nKaFFlPqE76xl1lfjAbiJqnxCKw\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:49:42 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Admin access only\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "View all tasks created by the user",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "View all tasks created by the user",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/myTasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "myTasks"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "740"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2e4-FeI57DTZ89y9GsShRCsQXfUyNCE\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:54:09 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"tasks\": [\n        {\n            \"id\": 13,\n            \"title\": \"Review Project\",\n            \"description\": \"Check the status and update the progress\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-04-02T14:30:00.000Z\",\n            \"created_at\": \"2026-03-29T08:42:57.000Z\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Commit the changes\",\n            \"description\": \"Commit the changes\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-03-29T18:30:00.000Z\",\n            \"created_at\": \"2026-03-29T04:22:12.000Z\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Update frontend\",\n            \"description\": \"Update frontend\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-03-30T18:30:00.000Z\",\n            \"created_at\": \"2026-03-28T17:58:07.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Study Backend\",\n            \"description\": \"Learn Node.js and APIs\",\n            \"status\": \"completed\",\n            \"deadline\": \"2026-04-05T14:30:00.000Z\",\n            \"created_at\": \"2026-03-28T07:41:35.000Z\"\n        }\n    ],\n    \"total\": 4,\n    \"page\": 1,\n    \"totalPages\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "View tasks assigned to user (admin page)",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "View tasks assigned to user (admin page)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/assigned",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "assigned"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1449"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"5a9-ik06s6fNSaWS4RB6IUY9hUti3Pc\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:55:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"tasks\": [\n        {\n            \"id\": 12,\n            \"title\": \"Complete backend task\",\n            \"description\": \"Finish backend\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-04-01T12:30:00.000Z\",\n            \"created_at\": \"2026-03-29T08:39:47.000Z\",\n            \"assigned_user_name\": \"Ram\",\n            \"assigned_user_email\": \"ram@gmail.com\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"Fix the bugs\",\n            \"description\": \"review the project and fix the bugs\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-03-30T18:30:00.000Z\",\n            \"created_at\": \"2026-03-29T04:59:50.000Z\",\n            \"assigned_user_name\": \"Ram\",\n            \"assigned_user_email\": \"ram@gmail.com\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Mail the project status\",\n            \"description\": \"Mail it with document\",\n            \"status\": \"pending\",\n            \"deadline\": \"2026-03-28T18:30:00.000Z\",\n            \"created_at\": \"2026-03-28T18:01:26.000Z\",\n            \"assigned_user_name\": \"Ram\",\n            \"assigned_user_email\": \"ram@gmail.com\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Review Project\",\n            \"description\": \"Review progess\",\n            \"status\": \"completed\",\n            \"deadline\": \"2026-03-28T18:30:00.000Z\",\n            \"created_at\": \"2026-03-28T15:41:10.000Z\",\n            \"assigned_user_name\": \"Ram\",\n            \"assigned_user_email\": \"ram@gmail.com\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Attend 3pm meeting\",\n            \"description\": \"Discuss and fix the bug\",\n            \"status\": \"completed\",\n            \"deadline\": \"2026-03-28T18:30:00.000Z\",\n            \"created_at\": \"2026-03-28T14:58:57.000Z\",\n            \"assigned_user_name\": \"John\",\n            \"assigned_user_email\": \"john@gmail.com\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Complete backend task\",\n            \"description\": \"Finish backend\",\n            \"status\": \"in_progress\",\n            \"deadline\": \"2026-04-01T12:30:00.000Z\",\n            \"created_at\": \"2026-03-28T06:51:37.000Z\",\n            \"assigned_user_name\": \"John\",\n            \"assigned_user_email\": \"john@gmail.com\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Task by admin",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Delete Task by admin",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/admin/8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tasks",
+                "admin",
+                "8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"36-2tTplRyXFHn7QXQ9yfMV6/Tq2m0\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 29 Mar 2026 08:58:54 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Admin assigned task deleted successfully\"\n}"
+        }
+      ]
+    }
+  ]
+}
