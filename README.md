@@ -226,27 +226,7 @@ http://localhost:5173
 You can test APIs using:
 
 * Postman
-* cURL
 
 ---
 
-## 📌 Future Improvements
 
-* Pagination
-* Task filtering
-* Admin dashboard UI
-* Notifications
-* Docker deployment
-
----
-
-## 👨‍💻 Author
-
-Your Name
-GitHub: https://github.com/your-username
-
----
-
-## ⭐ If you like this project
-
-Give it a ⭐ on GitHub!
