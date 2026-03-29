@@ -49,26 +49,50 @@ This project allows users to efficiently organize and track their work. Admins c
 
 ## 📂 Project Structure
 
-```
+```bash
 task-manager/
 │
 ├── backend/
+│   ├── config/
+│   │   └── dbConnection.js
+│   │
+│   ├── middleware/
+│   │   ├── authToken.js
+│   │   └── admin.js
+│   │
 │   ├── routes/
 │   │   ├── auth.js
 │   │   └── tasks.js
-│   ├── middleware/
-│   ├── config/
-│   └── server.js
+│   │
+│   ├── .env
+│   ├── hash.js
+│   ├── server.js
+│   ├── package.json
+│   └── package-lock.json
 │
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── App.jsx
-│   │   └── styles.css
+├── src/
+│   ├── assets/
+│   │
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Login.css
+│   │   ├── Dashboard.jsx
+│   │   ├── Dashboard.css
+│   │   ├── AdminDashboard.jsx
+│   │   └── AdminDashboard.css
+│   │
+│   ├── api.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
 │
+├── public/
+├── package.json
+├── package-lock.json
+├── index.html
 └── README.md
 ```
-
 ---
 
 ## ⚙️ Setup Instructions
