@@ -263,4 +263,35 @@ You can test APIs using:
 
 ---
 
+## 📦 Additional Resources
+
+The following files are included in this repository to help you set up and test the application easily:
+
+### 🗄️ Database Script
+
+👉 **[database.sql](./database.sql)**
+Contains the complete database schema including tables for users and tasks.
+Import this file into MySQL to quickly set up the database.
+
+---
+
+### 📬 Postman Collection
+
+👉 **[Postman Collection](./TaskManager.postman_collection.json)**
+Includes all API endpoints for testing:
+
+* Authentication APIs
+* User management APIs
+* Task management APIs
+
+You can import this file into Postman and start testing the APIs directly.
+
+---
+
+
+### 📌 Note
+
+* Update database credentials in the `.env` file before running the backend.
+
+
 
